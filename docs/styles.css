@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* NAVBAR: Fondo Azul Oscuro */
+.navbar, .navbar-dark, .bg-primary {
+    background-color: #1a2b4b !important;
+}
+
+/* TITULOS FUERA DEL MENU: Azul Oscuro */
+h1, h2, h3, .title {
+    color: #1a2b4b !important;
+    font-weight: 700;
+}
+
+/* MENU DROP DOWN: Texto en el Azul Marino Claro que pediste */
+.navbar-brand, 
+.nav-link, 
+.navbar-dark .navbar-nav .nav-link,
+.navbar-toggler-icon {
+    color: #5bc0de !important; /* Aquí aplicamos tu azul secundario */
+}
+
+/* LINKS EN EL CUERPO: Azul Marino Claro */
+a, .about-link {
+    color: #5bc0de !important;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover, .nav-link:hover {
+    color: #ffffff !important; /* Un destello blanco solo al pasar el mouse para saber que es clickeable */
+    text-decoration: underline;
+}
+
+/* Icono de la hamburguesa en el azul claro */
+.navbar-toggler {
+    border-color: #5bc0de !important;
+}

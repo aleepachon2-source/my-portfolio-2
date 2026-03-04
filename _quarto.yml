@@ -1,0 +1,29 @@
+project:
+  type: website
+  output-dir: docs
+  resources:
+    - "Diana_Pachon_Resume.pdf"
+
+website:
+  title: "Diana Alejandra Pachon"
+  navbar:
+    background: "#1a2b4b"
+    left:
+      - href: index.qmd
+        text: Home
+      - href: resume.qmd
+        text: Resume
+      - href: projects.qmd
+        text: Projects
+      - href: skills.qmd
+        text: Skills
+      - href: leadership.qmd
+        text: Leadership
+      - href: contact.qmd
+        text: Contact
+
+format:
+  html:
+    theme: minty
+    css: styles.css
+    toc: true

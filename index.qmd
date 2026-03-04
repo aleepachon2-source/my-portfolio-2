@@ -1,0 +1,25 @@
+---
+title: "Diana Alejandra Pachon"
+subtitle: "Marketing Strategist | MBA Candidate | UX & Visual Designer"
+about:
+  template: trestles
+  image: profile.jpg
+  image-shape: round
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/alejandra-pachon-garzon-marketing/
+    - icon: envelope
+      text: Email
+      href: mailto:dapg_41@hotmail.com
+    - icon: telephone
+      text: "236-268-2203"
+---
+
+## About Me
+
+¡Hola! I am a marketing professional and designer with a deep focus on User Experience (UX). I believe the most effective marketing strategies are built on intuitive, user-centered design. With a dual background in Advertising and Graphic Design, and currently completing my MBA, I bridge the gap between creative intuition and business growth. 
+
+Currently, I am co-founding Moonbow, where we engineer extraordinary digital solutions by blending high-performance tech with strategic marketing. My passion lies in crafting seamless user journeys that not only captivate but also convert, driving measurable results for startups and established brands alike. I am excited to connect with like-minded professionals and explore opportunities to innovate in the digital marketing space.
+
+

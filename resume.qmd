@@ -1,0 +1,28 @@
+<a href="Diana_Pachon_Resume.pdf" class="btn btn-outline-primary" target="_blank" style="margin-bottom: 20px;">
+    <i class="bi bi-download"></i> Download Full Resume (PDF)
+</a>
+
+## Experience Highlights
+
+**Digital Marketing Associate (Practicum) | Total Space Inc., BC** (Jan 2026 – Present)
+
+* **UX & Brand Evolution:** Leading brand migration and B2B identity unification.
+* **MarTech Optimization:** Implementing HubSpot workflows and AI-driven chatbots.
+* **Performance Marketing:** Managing Google/Meta Ads with a "video-first" SEO strategy.
+
+**Production Artist | Pure Red (Remote, USA)** (Feb 2023 – July 2024)
+
+* **Design Execution:** Developed digital and print assets for Tier-1 retail clients like Lowe’s.
+* **Workflow Optimization:** Collaborated with cross-functional teams to streamline creative production.
+
+**Content Creator & Marketing Analyst | Sensa Labs (Remote, Canada)** (Sept 2022 – July 2023)
+
+* **UX-Driven Redesign:** Led a corporate website redesign to enhance navigation flow.
+* **Growth Strategy:** Increased returning user engagement by 5% in three months.
+
+## Education
+
+* **Master of Business Administration (MBA)** | University Canada West, Vancouver (Expected 2026).
+  * *Specialized Electives:* Application of AI in Business, E-Commerce, and Digital Marketing Strategies.
+* **B.S. in Advertising & Graphic Design** | Universidad Jorge Tadeo Lozano, Colombia.
+
