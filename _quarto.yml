@@ -6,6 +6,7 @@ project:
 
 website:
   title: "Diana Alejandra Pachon"
+  favicon: favicon.svg
   navbar:
     background: "#1a2b4b"
     left:
