@@ -1,41 +1,232 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
 
-body {
+/* ─── DESIGN TOKENS ─────────────────────────────────────── */
+:root {
+    --bg:       #111111;
+    --surface:  #1a1a1a;
+    --accent:   #CCFF00;
+    --text:     #f0f0f0;
+    --muted:    #888888;
+    --border:   #2a2a2a;
+}
+
+/* ─── GLOBAL ─────────────────────────────────────────────── */
+html, body {
+    background-color: var(--bg) !important;
+    color: var(--text) !important;
     font-family: 'Inter', sans-serif !important;
 }
 
-/* NAVBAR: Fondo Azul Oscuro */
-.navbar, .navbar-dark, .bg-primary {
-    background-color: #1a2b4b !important;
+/* Remove Quarto light-mode defaults */
+.quarto-light, body.quarto-light {
+    background-color: var(--bg) !important;
+    color: var(--text) !important;
 }
 
-/* TITULOS FUERA DEL MENU: Azul Oscuro */
-h1, h2, h3, .title {
-    color: #1a2b4b !important;
-    font-weight: 700;
+/* ─── NAVBAR ─────────────────────────────────────────────── */
+.navbar,
+.navbar-dark,
+.bg-primary,
+header#quarto-header {
+    background-color: var(--bg) !important;
+    border-bottom: 1px solid var(--border) !important;
 }
 
-/* MENU DROP DOWN: Texto en el Azul Marino Claro que pediste */
-.navbar-brand, 
-.nav-link, 
+.navbar-brand,
+.navbar-title {
+    color: var(--accent) !important;
+    font-weight: 900 !important;
+    letter-spacing: -0.02em;
+    font-size: 1.1rem !important;
+}
+
+.nav-link,
 .navbar-dark .navbar-nav .nav-link,
-.navbar-toggler-icon {
-    color: #5bc0de !important; /* Aquí aplicamos tu azul secundario */
+.menu-text {
+    color: var(--text) !important;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: color 0.2s ease !important;
 }
 
-/* LINKS EN EL CUERPO: Azul Marino Claro */
-a, .about-link {
-    color: #5bc0de !important;
-    text-decoration: none;
-    font-weight: 600;
+.nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:hover,
+.nav-link.active {
+    color: var(--accent) !important;
 }
 
-a:hover, .nav-link:hover {
-    color: #ffffff !important; /* Un destello blanco solo al pasar el mouse para saber que es clickeable */
-    text-decoration: underline;
-}
-
-/* Icono de la hamburguesa en el azul claro */
 .navbar-toggler {
-    border-color: #5bc0de !important;
+    border-color: var(--accent) !important;
+}
+
+.navbar-toggler-icon {
+    filter: brightness(0) saturate(100%) invert(93%) sepia(70%) saturate(600%) hue-rotate(30deg);
+}
+
+/* ─── HEADINGS ───────────────────────────────────────────── */
+h1, .title {
+    color: var(--text) !important;
+    font-weight: 900 !important;
+    font-size: clamp(2.4rem, 6vw, 4.5rem) !important;
+    letter-spacing: -0.04em !important;
+    line-height: 1.05 !important;
+}
+
+h2 {
+    color: var(--accent) !important;
+    font-weight: 700 !important;
+    font-size: clamp(1.3rem, 3vw, 2rem) !important;
+    letter-spacing: -0.02em !important;
+    margin-top: 2.5rem !important;
+    border-bottom: 1px solid var(--border) !important;
+    padding-bottom: 0.4rem !important;
+}
+
+h3 {
+    color: var(--text) !important;
+    font-weight: 700 !important;
+    font-size: 1.1rem !important;
+    letter-spacing: 0.04em !important;
+    text-transform: uppercase !important;
+}
+
+h4, h5, h6 {
+    color: var(--text) !important;
+    font-weight: 600 !important;
+}
+
+.subtitle, p.subtitle {
+    color: var(--muted) !important;
+    font-weight: 400 !important;
+    font-size: 1.1rem !important;
+    letter-spacing: 0.01em !important;
+}
+
+/* ─── LINKS ──────────────────────────────────────────────── */
+a,
+.about-link {
+    color: var(--accent) !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    transition: opacity 0.2s ease !important;
+}
+
+a:hover,
+.about-link:hover {
+    opacity: 0.75 !important;
+    text-decoration: underline !important;
+}
+
+/* ─── CONTENT AREAS ──────────────────────────────────────── */
+#quarto-content,
+.quarto-container,
+.page-columns {
+    background-color: var(--bg) !important;
+}
+
+.quarto-about-trestles {
+    background-color: var(--bg) !important;
+}
+
+main,
+.about-contents,
+.about-entity {
+    background-color: var(--bg) !important;
+    color: var(--text) !important;
+}
+
+p, li {
+    color: var(--text) !important;
+    line-height: 1.75 !important;
+}
+
+/* ─── SIDEBAR / TOC ──────────────────────────────────────── */
+#quarto-margin-sidebar,
+.sidebar,
+nav#TOC {
+    background-color: var(--bg) !important;
+    border-left: 1px solid var(--border) !important;
+}
+
+.toc-active .nav-link,
+nav#TOC a {
+    color: var(--muted) !important;
+}
+
+.toc-active .nav-link.active,
+nav#TOC a:hover {
+    color: var(--accent) !important;
+}
+
+/* ─── ABOUT PAGE ELEMENTS ────────────────────────────────── */
+.about-image {
+    border: 3px solid var(--accent) !important;
+    border-radius: 4px !important;
+}
+
+.about-link {
+    border: 1px solid var(--border) !important;
+    border-radius: 4px !important;
+    padding: 0.4rem 0.9rem !important;
+    background-color: var(--surface) !important;
+    transition: border-color 0.2s, background-color 0.2s !important;
+}
+
+.about-link:hover {
+    border-color: var(--accent) !important;
+    background-color: var(--accent) !important;
+    color: var(--bg) !important;
+    opacity: 1 !important;
+}
+
+/* ─── BUTTONS ────────────────────────────────────────────── */
+.btn,
+.btn-outline-primary {
+    border-color: var(--accent) !important;
+    color: var(--accent) !important;
+    background-color: transparent !important;
+    font-weight: 600 !important;
+    transition: background-color 0.2s, color 0.2s !important;
+}
+
+.btn:hover,
+.btn-outline-primary:hover {
+    background-color: var(--accent) !important;
+    color: var(--bg) !important;
+}
+
+/* ─── SEARCH ─────────────────────────────────────────────── */
+.quarto-search-button,
+#quarto-search .aa-Autocomplete {
+    color: var(--text) !important;
+}
+
+/* ─── FOOTER ─────────────────────────────────────────────── */
+footer {
+    background-color: var(--bg) !important;
+    border-top: 1px solid var(--border) !important;
+    color: var(--muted) !important;
+}
+
+/* ─── PROJECT CARDS ──────────────────────────────────────── */
+.project-link-btn {
+    display: inline-block;
+    margin-top: 0.6rem;
+    padding: 0.4rem 1rem;
+    background-color: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent) !important;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-radius: 2px;
+    transition: background-color 0.2s, color 0.2s;
+    text-decoration: none !important;
+}
+
+.project-link-btn:hover {
+    background-color: var(--accent) !important;
+    color: var(--bg) !important;
+    opacity: 1 !important;
 }

@@ -5,10 +5,11 @@ project:
     - "Diana_Pachon_Resume.pdf"
 
 website:
-  title: "Diana Alejandra Pachon"
+  title: "Alejandra Pachon"
   favicon: favicon.svg
   navbar:
-    background: "#1a2b4b"
+    background: "#111111"
+    foreground: "#CCFF00"
     left:
       - href: index.qmd
         text: Home
@@ -25,6 +26,6 @@ website:
 
 format:
   html:
-    theme: minty
+    theme: darkly
     css: styles.css
     toc: true
