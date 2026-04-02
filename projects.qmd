@@ -1,13 +1,15 @@
 # Projects & Case Studies
 
-## Moonbow: Digital Engineering & Growth
+## Moonsbow: Digital Engineering & Growth
 **Role: Co-Founder & Growth Lead**
 
-![Moonbow Website Interface](moonbow.png){fig-align="center" width="80%"}
+![Moonsbow Website Interface](moonbow.png){fig-align="center" width="80%"}
 
 * **The Challenge:** Building a devshop that integrates high-performance engineering with strategic marketing.
 * **The Solution:** Developed automated social media technology and sales funnel engineering.
 * **Impact:** Precision-targeted Google and Meta Ads generating measurable ROI.
+
+<a href="https://www.moonsbow.com/" class="project-link-btn" target="_blank">View Project →</a>
 
 ## Total Space Inc.: B2B Brand Migration
 **Role: Digital Marketing Associate**
@@ -18,12 +20,16 @@
 * **The Solution:** Implemented HubSpot workflows and AI-driven chatbots to optimize the sales funnel.
 * **Impact:** Created a seamless user journey across digital platforms.
 
-## Ubiquitous: Tech Stack Migration
+<a href="https://totalspace-umber.vercel.app/" class="project-link-btn" target="_blank">View Project →</a>
+
+## UB Safety: Tech Stack Migration
 **Role: Lead Designer / Developer**
 
-![Ubiquitous Migration Project](ubiquitous.png){fig-align="center" width="80%"}
+![UB Safety Migration Project](ubiquitous.png){fig-align="center" width="80%"}
 
 * **The Challenge:** Migrating a legacy site from **WordPress to Astro** to improve performance and SEO.
 * **The Solution:** Rebuilt the site architecture using modern web standards for faster loading times and better UX.
 * **Impact:** Significant reduction in bounce rate and improved technical SEO rankings.
+
+<a href="https://www.ubsafety.ca/" class="project-link-btn" target="_blank">View Project →</a>
 

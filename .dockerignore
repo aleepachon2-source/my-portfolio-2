@@ -1,0 +1,6 @@
+.git
+.quarto
+node_modules
+*_files
+_site
+*.docx
