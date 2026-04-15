@@ -1,142 +1,136 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap');
 
 /* ─── DESIGN TOKENS ─────────────────────────────────────── */
 :root {
-    --bg:       #111111;
-    --surface:  #1a1a1a;
-    --accent:   #CCFF00;
-    --text:     #f0f0f0;
-    --muted:    #888888;
-    --border:   #2a2a2a;
+    --color-bg:    #E0E0D4;
+    --color-pink:  #F295A0;
+    --color-black: #272A2A;
+    --color-olive: #989C14;
+    --color-white: #FFFFFF;
 }
 
 /* ─── GLOBAL ─────────────────────────────────────────────── */
 html, body {
-    background-color: var(--bg) !important;
-    color: var(--text) !important;
-    font-family: 'Inter', sans-serif !important;
+    background-color: var(--color-bg) !important;
+    color: var(--color-black) !important;
+    font-family: 'DM Sans', sans-serif !important;
 }
 
-/* Remove Quarto light-mode defaults */
-.quarto-light, body.quarto-light {
-    background-color: var(--bg) !important;
-    color: var(--text) !important;
+.quarto-light, body.quarto-light,
+.quarto-dark, body.quarto-dark {
+    background-color: var(--color-bg) !important;
+    color: var(--color-black) !important;
 }
 
 /* ─── NAVBAR ─────────────────────────────────────────────── */
 .navbar,
 .navbar-dark,
+.navbar-expand-lg,
 .bg-primary,
 header#quarto-header {
-    background-color: var(--bg) !important;
-    border-bottom: 1px solid var(--border) !important;
+    background-color: var(--color-black) !important;
+    border-bottom: none !important;
 }
 
 .navbar-brand,
 .navbar-title {
-    color: var(--accent) !important;
-    font-weight: 900 !important;
-    letter-spacing: -0.02em;
+    color: var(--color-bg) !important;
+    font-family: 'Playfair Display', serif !important;
+    font-weight: 700 !important;
     font-size: 1.1rem !important;
 }
 
 .nav-link,
-.navbar-dark .navbar-nav .nav-link,
+.navbar-nav .nav-link,
 .menu-text {
-    color: var(--text) !important;
+    color: var(--color-bg) !important;
+    font-family: 'DM Sans', sans-serif !important;
     font-weight: 500;
-    letter-spacing: 0.02em;
     transition: color 0.2s ease !important;
 }
 
 .nav-link:hover,
-.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:hover,
 .nav-link.active {
-    color: var(--accent) !important;
+    color: var(--color-pink) !important;
+    opacity: 1 !important;
 }
 
 .navbar-toggler {
-    border-color: var(--accent) !important;
+    border-color: var(--color-bg) !important;
 }
 
 .navbar-toggler-icon {
-    filter: brightness(0) saturate(100%) invert(93%) sepia(70%) saturate(600%) hue-rotate(30deg);
+    filter: brightness(0) invert(1);
 }
 
 /* ─── HEADINGS ───────────────────────────────────────────── */
+h1, h2, .title {
+    font-family: 'Playfair Display', serif !important;
+    font-weight: 700 !important;
+    color: var(--color-black) !important;
+}
+
 h1, .title {
-    color: var(--text) !important;
-    font-weight: 900 !important;
-    font-size: clamp(2.4rem, 6vw, 4.5rem) !important;
-    letter-spacing: -0.04em !important;
-    line-height: 1.05 !important;
+    font-size: clamp(2.4rem, 6vw, 4rem) !important;
+    line-height: 1.1 !important;
 }
 
 h2 {
-    color: var(--accent) !important;
-    font-weight: 700 !important;
-    font-size: clamp(1.3rem, 3vw, 2rem) !important;
-    letter-spacing: -0.02em !important;
-    margin-top: 2.5rem !important;
-    border-bottom: 1px solid var(--border) !important;
-    padding-bottom: 0.4rem !important;
+    font-size: clamp(1.4rem, 3vw, 2rem) !important;
+    margin-top: 2rem !important;
+    border-bottom: none !important;
 }
 
-h3 {
-    color: var(--text) !important;
-    font-weight: 700 !important;
-    font-size: 1.1rem !important;
-    letter-spacing: 0.04em !important;
-    text-transform: uppercase !important;
-}
-
-h4, h5, h6 {
-    color: var(--text) !important;
+h3, h4, h5, h6 {
+    font-family: 'DM Sans', sans-serif !important;
     font-weight: 600 !important;
+    color: var(--color-black) !important;
 }
 
 .subtitle, p.subtitle {
-    color: var(--muted) !important;
+    color: var(--color-black) !important;
+    font-family: 'DM Sans', sans-serif !important;
     font-weight: 400 !important;
-    font-size: 1.1rem !important;
-    letter-spacing: 0.01em !important;
+    font-size: 1.05rem !important;
+    opacity: 0.8;
 }
 
 /* ─── LINKS ──────────────────────────────────────────────── */
-a,
-.about-link {
-    color: var(--accent) !important;
+a {
+    color: var(--color-black) !important;
     text-decoration: none !important;
-    font-weight: 600 !important;
     transition: opacity 0.2s ease !important;
 }
 
-a:hover,
-.about-link:hover {
+a:hover {
     opacity: 0.75 !important;
-    text-decoration: underline !important;
+    text-decoration: none !important;
 }
 
 /* ─── CONTENT AREAS ──────────────────────────────────────── */
 #quarto-content,
 .quarto-container,
-.page-columns {
-    background-color: var(--bg) !important;
+.page-columns,
+.page-rows-contents {
+    background-color: var(--color-bg) !important;
 }
 
 .quarto-about-trestles {
-    background-color: var(--bg) !important;
+    background-color: var(--color-bg) !important;
+    padding: 3rem 1rem !important;
 }
 
 main,
 .about-contents,
 .about-entity {
-    background-color: var(--bg) !important;
-    color: var(--text) !important;
+    background-color: var(--color-bg) !important;
+    color: var(--color-black) !important;
 }
 
 p, li {
-    color: var(--text) !important;
+    color: var(--color-black) !important;
+    font-family: 'DM Sans', sans-serif !important;
     line-height: 1.75 !important;
 }
 
@@ -144,89 +138,227 @@ p, li {
 #quarto-margin-sidebar,
 .sidebar,
 nav#TOC {
-    background-color: var(--bg) !important;
-    border-left: 1px solid var(--border) !important;
+    background-color: var(--color-bg) !important;
+    border-left: 1px solid rgba(39,42,42,0.15) !important;
 }
 
 .toc-active .nav-link,
 nav#TOC a {
-    color: var(--muted) !important;
+    color: var(--color-black) !important;
+    opacity: 0.6;
 }
 
 .toc-active .nav-link.active,
 nav#TOC a:hover {
-    color: var(--accent) !important;
+    color: var(--color-black) !important;
+    opacity: 1 !important;
 }
 
-/* ─── ABOUT PAGE ELEMENTS ────────────────────────────────── */
+/* ─── ABOUT PAGE ─────────────────────────────────────────── */
 .about-image {
-    border: 3px solid var(--accent) !important;
-    border-radius: 4px !important;
+    border: 3px solid var(--color-olive) !important;
+    border-radius: 12px !important;
 }
 
 .about-link {
-    border: 1px solid var(--border) !important;
-    border-radius: 4px !important;
-    padding: 0.4rem 0.9rem !important;
-    background-color: var(--surface) !important;
-    transition: border-color 0.2s, background-color 0.2s !important;
+    border: 1px solid var(--color-black) !important;
+    border-radius: 30px !important;
+    padding: 0.4rem 1.1rem !important;
+    background-color: var(--color-pink) !important;
+    color: var(--color-black) !important;
+    font-family: 'DM Sans', sans-serif !important;
+    font-weight: 500 !important;
+    transition: opacity 0.2s !important;
+    text-decoration: none !important;
 }
 
 .about-link:hover {
-    border-color: var(--accent) !important;
-    background-color: var(--accent) !important;
-    color: var(--bg) !important;
-    opacity: 1 !important;
+    opacity: 0.85 !important;
+    background-color: var(--color-pink) !important;
+    color: var(--color-black) !important;
+}
+
+/* ─── HERO SECTION ───────────────────────────────────────── */
+.hero-cta-btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 12px 28px;
+    background-color: var(--color-pink);
+    color: var(--color-black) !important;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 30px;
+    border: none;
+    text-decoration: none !important;
+    transition: opacity 0.2s ease;
+}
+
+.hero-cta-btn:hover {
+    opacity: 0.85 !important;
+}
+
+.hero-divider {
+    border: none;
+    border-top: 2px solid var(--color-olive);
+    margin: 2.5rem auto;
+    width: 80%;
+    max-width: 600px;
 }
 
 /* ─── BUTTONS ────────────────────────────────────────────── */
 .btn,
 .btn-outline-primary {
-    border-color: var(--accent) !important;
-    color: var(--accent) !important;
-    background-color: transparent !important;
+    border-color: var(--color-pink) !important;
+    color: var(--color-black) !important;
+    background-color: var(--color-pink) !important;
+    font-family: 'DM Sans', sans-serif !important;
     font-weight: 600 !important;
-    transition: background-color 0.2s, color 0.2s !important;
+    border-radius: 30px !important;
+    padding: 10px 24px !important;
+    transition: opacity 0.2s !important;
 }
 
 .btn:hover,
 .btn-outline-primary:hover {
-    background-color: var(--accent) !important;
-    color: var(--bg) !important;
+    opacity: 0.85 !important;
+    color: var(--color-black) !important;
 }
 
 /* ─── SEARCH ─────────────────────────────────────────────── */
 .quarto-search-button,
-#quarto-search .aa-Autocomplete {
-    color: var(--text) !important;
+#quarto-search .aa-Autocomplete,
+.aa-DetachedSearchButtonIcon,
+.aa-DetachedSearchButtonPlaceholder {
+    color: var(--color-bg) !important;
 }
 
 /* ─── FOOTER ─────────────────────────────────────────────── */
 footer {
-    background-color: var(--bg) !important;
-    border-top: 1px solid var(--border) !important;
-    color: var(--muted) !important;
+    background-color: var(--color-bg) !important;
+    border-top: 1px solid rgba(39,42,42,0.2) !important;
+    color: var(--color-black) !important;
 }
 
 /* ─── PROJECT CARDS ──────────────────────────────────────── */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.project-card {
+    background-color: var(--color-white);
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(39,42,42,0.08);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px rgba(39,42,42,0.14);
+}
+
+.project-card h2 {
+    font-family: 'Playfair Display', serif !important;
+    font-weight: 700 !important;
+    color: var(--color-black) !important;
+    font-size: 1.35rem !important;
+    margin-top: 0.75rem !important;
+    margin-bottom: 0.25rem !important;
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+}
+
+.project-role-tag {
+    display: inline-block;
+    background-color: var(--color-olive);
+    color: var(--color-white) !important;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 3px 12px;
+    border-radius: 20px;
+    margin-bottom: 0.75rem;
+}
+
+.project-card ul {
+    flex: 1;
+    padding-left: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.project-card ul li {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
 .project-link-btn {
     display: inline-block;
-    margin-top: 0.6rem;
-    padding: 0.4rem 1rem;
-    background-color: transparent;
-    border: 1px solid var(--accent);
-    color: var(--accent) !important;
-    font-weight: 700;
-    font-size: 0.85rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    border-radius: 2px;
-    transition: background-color 0.2s, color 0.2s;
+    margin-top: auto;
+    padding: 10px 22px;
+    background-color: var(--color-pink);
+    border: none;
+    color: var(--color-black) !important;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 30px;
+    transition: opacity 0.2s;
     text-decoration: none !important;
+    align-self: flex-start;
 }
 
 .project-link-btn:hover {
-    background-color: var(--accent) !important;
-    color: var(--bg) !important;
-    opacity: 1 !important;
+    opacity: 0.85 !important;
+}
+
+/* ─── MISC OVERRIDES ─────────────────────────────────────── */
+.quarto-title-block {
+    background-color: var(--color-bg) !important;
+}
+
+.panel-tabset,
+.tab-content,
+.card,
+.card-body {
+    background-color: var(--color-bg) !important;
+    border-color: rgba(39,42,42,0.15) !important;
+    color: var(--color-black) !important;
+}
+
+table {
+    color: var(--color-black) !important;
+}
+
+code {
+    background-color: rgba(39,42,42,0.08) !important;
+    color: var(--color-black) !important;
+}
+
+/* Override Bootstrap dark background on various elements */
+.bg-dark,
+[data-bs-theme="dark"] {
+    background-color: var(--color-bg) !important;
+    color: var(--color-black) !important;
+}
+
+[data-bs-theme="dark"] .navbar {
+    background-color: var(--color-black) !important;
 }

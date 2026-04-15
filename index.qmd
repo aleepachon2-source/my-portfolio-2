@@ -1,6 +1,6 @@
 ---
 title: "Alejandra Pachon"
-subtitle: "Graphic Designer & Brand Specialist | MBA 2026"
+subtitle: "Marketing & Brand Specialist | Graphic Designer | MBA"
 about:
   template: trestles
   image: profile.jpg
@@ -11,12 +11,15 @@ about:
       href: https://www.linkedin.com/in/alejandra-pachon-garzon-marketing/
     - icon: envelope
       text: Email
-      href: mailto:dapg_41@hotmail.com
+      href: mailto:aleepachon2@gmail.com
     - icon: telephone
       text: "236-268-2203"
 ---
 
 ## About Me
 
-I am a graphic designer and brand specialist with a dual degree in Graphic Design and Advertising and an MBA. I build brand systems, design digital and print assets, and create cohesive visual identities for clients across Canada and Latin America. I also co-founded Moonsbow, a digital studio where design meets engineering.
+I'm a marketing strategist and brand specialist with a background in graphic design and an MBA. I help companies grow their digital presence through data-informed campaigns, brand strategy, and compelling visual content. With experience across Canada and Latin America, I bring both creative and analytical thinking to every project.
 
+<a href="projects.html" class="hero-cta-btn">View My Work →</a>
+
+<hr class="hero-divider">
