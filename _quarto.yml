@@ -8,8 +8,8 @@ website:
   title: "Alejandra Pachon"
   favicon: favicon.svg
   navbar:
-    background: "#111111"
-    foreground: "#CCFF00"
+    background: "#272A2A"
+    foreground: "#E0E0D4"
     left:
       - href: index.qmd
         text: Home
@@ -26,6 +26,6 @@ website:
 
 format:
   html:
-    theme: darkly
+    theme: flatly
     css: styles.css
     toc: true
