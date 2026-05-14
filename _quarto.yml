@@ -28,5 +28,4 @@ format:
   html:
     theme: flatly
     css: styles.css
-    include-in-header: umami.html
     toc: true
