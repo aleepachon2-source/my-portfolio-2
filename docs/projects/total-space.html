@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Total Space Inc.: Complete B2B Brand Transformation | Alejandra Pachon</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script defer src="https://metrics.moonsbow.com/script.js" data-website-id="23dd3b2d-5fa2-4e09-b1e0-ba3dbada944a"></script>
+  <style>
+    :root {
+      --bg: #F5F5DC;
+      --bg-alt: #efe8d3;
+      --bg-accent: #ecefd6;
+      --text: #272A2A;
+      --pink: #FF69B4;
+      --yellow-green: #9ACD32;
+      --white: #ffffff;
+      --border: rgba(39, 42, 42, 0.15);
+      --shadow: 0 10px 24px rgba(39, 42, 42, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      line-height: 1.65;
+    }
+
+    h1, h2, h3 { font-family: 'Playfair Display', serif; margin: 0; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: #272A2A;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .nav-wrap {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      justify-content: space-between;
+      padding: 0.9rem 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      color: var(--bg);
+      text-decoration: none;
+      font-size: 1.08rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--bg);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.96rem;
+    }
+
+    .nav-links a:hover,
+    .nav-links a[aria-current="page"] { color: var(--pink); }
+
+    .page-shell {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 260px;
+      gap: 2rem;
+      padding: 2.2rem 1.2rem 4rem;
+    }
+
+    .toc {
+      position: sticky;
+      top: 98px;
+      align-self: start;
+      border-left: 1px solid var(--border);
+      padding-left: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .toc h3 { font-size: 1rem; margin-bottom: 0.75rem; }
+
+    .toc a {
+      display: block;
+      color: var(--text);
+      opacity: 0.78;
+      text-decoration: none;
+      margin: 0.4rem 0;
+    }
+
+    .toc a:hover { opacity: 1; }
+
+    .section {
+      padding: 2.2rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section.alt {
+      margin: 0 -1.2rem;
+      padding: 2.2rem 1.2rem;
+      background: var(--bg-alt);
+      border-radius: 14px;
+      border-bottom: none;
+    }
+
+    .section.accent {
+      margin: 0 -1.2rem;
+      padding: 2.2rem 1.2rem;
+      background: var(--bg-accent);
+      border-radius: 14px;
+      border-bottom: none;
+    }
+
+    .hero-image {
+      aspect-ratio: 2 / 1;
+      width: 100%;
+      border: 1px dashed rgba(39, 42, 42, 0.45);
+      border-radius: 16px;
+      background: linear-gradient(130deg, #f7f0de, #eadfbe);
+      display: grid;
+      place-items: center;
+      color: rgba(39, 42, 42, 0.75);
+      font-weight: 600;
+      margin-bottom: 1.35rem;
+      text-align: center;
+      padding: 0.8rem;
+    }
+
+    .hero h1 { font-size: clamp(2rem, 4.6vw, 3.45rem); line-height: 1.12; margin-bottom: 0.7rem; }
+    .subtitle { margin: 0 0 1rem; font-size: 1.05rem; max-width: 900px; }
+
+    .badge-row { display: flex; flex-wrap: wrap; gap: 0.55rem; }
+
+    .badge {
+      display: inline-flex;
+      border-radius: 999px;
+      padding: 0.38rem 0.78rem;
+      font-size: 0.86rem;
+      font-weight: 600;
+    }
+
+    .badge-role { background: var(--yellow-green); }
+    .badge-date { background: #e4e4cb; }
+    .badge-tool { background: var(--pink); }
+
+    .overview-grid,
+    .solution-grid,
+    .results-grid { display: grid; gap: 1rem; }
+
+    .overview-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .solution-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .results-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+    .panel,
+    .metric,
+    .solution-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1rem;
+      box-shadow: 0 3px 10px rgba(39,42,42,0.05);
+    }
+
+    .section h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); margin-bottom: 1rem; }
+
+    .solution-card .icon,
+    .metric .icon { font-size: 1.35rem; }
+
+    .solution-card h3,
+    .metric h3 { margin: 0.5rem 0; font-size: 1.17rem; }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1rem;
+      grid-auto-flow: dense;
+    }
+
+    .gallery-item {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--white);
+      border: 1px solid var(--border);
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.015);
+      box-shadow: var(--shadow);
+    }
+
+    .gallery-image {
+      min-height: 160px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 0.8rem;
+      background: linear-gradient(145deg, #f7f2e4, #e8debf);
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: rgba(39, 42, 42, 0.8);
+    }
+
+    .gallery-item.wide { grid-column: span 2; }
+
+    .caption {
+      margin: 0;
+      font-size: 0.81rem;
+      padding: 0.65rem 0.75rem 0.85rem;
+      color: rgba(39,42,42,0.84);
+    }
+
+    .play-overlay::before {
+      content: "▶";
+      display: inline-grid;
+      place-items: center;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(39,42,42,0.78);
+      color: var(--white);
+      font-size: 1.5rem;
+      margin-bottom: 0.65rem;
+    }
+
+    .tool-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .tool-pills .badge {
+      background: #f2ebd5;
+      border: 1px solid rgba(39,42,42,0.16);
+      font-weight: 500;
+    }
+
+    .cta-wrap {
+      text-align: center;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 0.85rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.8rem;
+    }
+
+    .btn {
+      display: inline-block;
+      border-radius: 999px;
+      text-decoration: none;
+      padding: 0.72rem 1.15rem;
+      font-weight: 600;
+      border: 2px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--pink);
+      color: var(--text);
+    }
+
+    .btn-outline {
+      border-color: var(--text);
+      color: var(--text);
+      background: transparent;
+    }
+
+    .cta-wrap a { color: var(--text); }
+
+    @media (max-width: 1050px) {
+      .page-shell { grid-template-columns: 1fr; }
+      .toc { position: static; border-left: none; border-top: 1px solid var(--border); padding-top: 1rem; padding-left: 0; order: 2; }
+      .content { order: 1; }
+      .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .gallery-item.wide { grid-column: span 2; }
+      .results-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .solution-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 760px) {
+      .overview-grid,
+      .results-grid,
+      .gallery,
+      .gallery-item.wide { grid-template-columns: 1fr; grid-column: span 1; }
+      .section.alt,
+      .section.accent { margin: 0; border-radius: 12px; }
+      .nav-wrap { padding: 0.8rem 1rem; }
+      .page-shell { padding: 1.45rem 1rem 3rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a href="../index.html" class="brand">Alejandra Pachon</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="../resume.html">Resume</a>
+        <a href="../projects.html" aria-current="page">Projects</a>
+        <a href="../skills.html">Skills</a>
+        <a href="../leadership.html">Leadership</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-shell">
+    <main class="content">
+      <section class="section hero" id="overview">
+        <div class="hero-image">Hero Image Placeholder (Website Screenshot - 1200x600px)</div>
+        <h1>Total Space Inc.: Complete B2B Brand Transformation</h1>
+        <p class="subtitle">End-to-end brand overhaul and digital ecosystem for urban space optimization technology company</p>
+        <div class="badge-row" aria-label="Project metadata">
+          <span class="badge badge-role">Digital Marketing Associate</span>
+          <span class="badge badge-date">January 2026 - April 2026</span>
+          <span class="badge badge-tool">Figma</span>
+          <span class="badge badge-tool">Adobe Creative Suite</span>
+          <span class="badge badge-tool">HubSpot</span>
+          <span class="badge badge-tool">Google Ads</span>
+          <span class="badge badge-tool">Meta Ads</span>
+        </div>
+      </section>
+
+      <section class="section" aria-label="Project overview grid">
+        <h2>Project Overview</h2>
+        <div class="overview-grid">
+          <article class="panel">
+            <h3>Timeline</h3>
+            <p>January 2026 - April 2026<br>4-month practicum</p>
+          </article>
+          <article class="panel">
+            <h3>Client</h3>
+            <p>Total Space Inc.<br>Urban Space Engineering &amp; Automation<br>North Vancouver, BC</p>
+          </article>
+          <article class="panel">
+            <h3>My Role</h3>
+            <p>Digital Marketing Associate<br>Brand Strategy<br>Web Development<br>Content Creation</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section alt" id="challenge">
+        <h2>The Challenge</h2>
+        <p>Total Space Inc., a North Vancouver-based urban space optimization company, specializes in automated parking systems, retractable pool platforms, and smart city solutions. Despite having innovative technology and established operations, they lacked cohesive branding and digital infrastructure to effectively communicate their sophisticated engineering solutions to developers, architects, and municipalities. The company required:</p>
+        <ul>
+          <li>A unified brand identity that reflected their innovative technology leadership</li>
+          <li>A modern website that could explain complex mechanical solutions clearly</li>
+          <li>Integrated CRM capabilities to manage B2B developer relationships</li>
+          <li>Video and paid media content to demonstrate their systems in action</li>
+          <li>Scalable marketing infrastructure for international expansion</li>
+        </ul>
+      </section>
+
+      <section class="section" id="solution">
+        <h2>The Solution</h2>
+        <div class="solution-grid">
+          <article class="solution-card">
+            <div class="icon" aria-hidden="true">🎨</div>
+            <h3>Comprehensive Brand Identity</h3>
+            <p>Designed complete B2B brand system including logo redesign, brand guidelines, service catalogue, and promotional video showcasing automated parking and pool systems. Created cohesive visual language that communicates technical sophistication and innovation.</p>
+          </article>
+          <article class="solution-card">
+            <div class="icon" aria-hidden="true">💻</div>
+            <h3>Custom Website &amp; CRM</h3>
+            <p>Built and launched custom website with AI-driven chatbot and HubSpot CRM integration to manage developer inquiries and project pipelines. Designed all UI components and visual assets from concept to production, making complex engineering solutions accessible.</p>
+          </article>
+          <article class="solution-card">
+            <div class="icon" aria-hidden="true">📹</div>
+            <h3>Video-First Content Strategy</h3>
+            <p>Produced video content demonstrating automated parking systems, retractable pools, and vehicle turntables in action. Created paid media assets for Google Ads and Meta Ads campaigns targeting developers and architects. Maintained brand consistency across owned and paid channels.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="showcase">
+        <h2>Project Showcase</h2>
+        <div class="gallery" aria-label="Project showcase gallery">
+          <figure class="gallery-item wide">
+            <div class="gallery-image">Website Homepage - Before &amp; After (Side-by-side comparison)</div>
+            <figcaption class="caption">Website Homepage - Before &amp; After</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <div class="gallery-image play-overlay">Promotional Video Thumbnail<br>Automated Parking Systems</div>
+            <figcaption class="caption">Promotional Video Thumbnail - Automated Parking Systems</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <div class="gallery-image">Service Catalogue - Cover</div>
+            <figcaption class="caption">Service Catalogue - Cover</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <div class="gallery-image">Service Catalogue - Interior Spread</div>
+            <figcaption class="caption">Service Catalogue - Interior Spread</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <div class="gallery-image">Website - Mobile Responsive Views (3 phone mockups)</div>
+            <figcaption class="caption">Website - Mobile Responsive Views</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <div class="gallery-image">Brand Guidelines - Logo System</div>
+            <figcaption class="caption">Brand Guidelines - Logo System</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <div class="gallery-image">HubSpot CRM Integration - Developer Pipeline Dashboard</div>
+            <figcaption class="caption">HubSpot CRM Integration - Developer Pipeline Dashboard</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <div class="gallery-image">Paid Media Assets - Technology Demonstration Ads</div>
+            <figcaption class="caption">Paid Media Assets - Technology Demonstration Ads</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section accent" id="results">
+        <h2>The Results</h2>
+        <div class="results-grid">
+          <article class="metric">
+            <div class="icon" aria-hidden="true">✅</div>
+            <h3>Complete Brand System</h3>
+            <p>Delivered comprehensive brand guidelines that position Total Space as a technology leader in urban space optimization</p>
+          </article>
+          <article class="metric">
+            <div class="icon" aria-hidden="true">🌐</div>
+            <h3>Integrated Digital Ecosystem</h3>
+            <p>Fully functional website with AI chatbot, CRM for developer relationships, and analytics infrastructure</p>
+          </article>
+          <article class="metric">
+            <div class="icon" aria-hidden="true">📊</div>
+            <h3>Multi-Channel Assets</h3>
+            <p>Video demonstrations and paid media assets driving qualified leads from developers and architects</p>
+          </article>
+          <article class="metric">
+            <div class="icon" aria-hidden="true">🚀</div>
+            <h3>Marketing Foundation</h3>
+            <p>Established scalable B2B marketing infrastructure for North American and international expansion</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="tools">
+        <h2>Tools &amp; Technologies</h2>
+        <div class="tool-pills">
+          <span class="badge">Figma (Design &amp; Prototyping)</span>
+          <span class="badge">Adobe Creative Suite (Brand Assets &amp; Video)</span>
+          <span class="badge">HubSpot (CRM &amp; B2B Pipeline Management)</span>
+          <span class="badge">Google Ads (Paid Search - B2B Targeting)</span>
+          <span class="badge">Meta Ads Manager (LinkedIn B2B Campaigns)</span>
+          <span class="badge">HTML/CSS/JavaScript (Web Development)</span>
+        </div>
+      </section>
+
+      <section class="section cta-wrap">
+        <div class="cta-buttons">
+          <a class="btn btn-primary" href="https://totalspace-umber.vercel.app/" target="_blank" rel="noopener noreferrer">Visit Live Website →</a>
+          <a class="btn btn-outline" href="../projects.html">← Back to Projects</a>
+        </div>
+        <a href="../contact.html">Interested in working together? Let's talk →</a>
+      </section>
+    </main>
+
+    <aside class="toc" aria-label="On this page navigation">
+      <h3>On this page</h3>
+      <a href="#overview">Overview</a>
+      <a href="#challenge">The Challenge</a>
+      <a href="#solution">The Solution</a>
+      <a href="#showcase">Project Showcase</a>
+      <a href="#results">Results</a>
+      <a href="#tools">Tools</a>
+    </aside>
+  </div>
+</body>
+</html>
