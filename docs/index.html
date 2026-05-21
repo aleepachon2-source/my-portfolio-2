@@ -26,3 +26,626 @@
   --serif: 'Playfair Display', Georgia, serif;
   --sans: 'DM Sans', sans-serif;
 }
+html { scroll-behavior: smooth; }
+body { font-family: var(--sans); background: var(--beige); color: var(--charcoal); line-height: 1.7; overflow-x: hidden; }
+
+/* NAV */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.1rem 4rem; background: rgba(245,242,240,0.96); backdrop-filter: blur(12px); border-bottom: 1px solid var(--beige-dark); }
+.nav-logo { font-family: var(--serif); font-size: 1.15rem; font-weight: 700; color: var(--charcoal); text-decoration: none; }
+.nav-logo span { color: var(--pink); }
+.nav-links { display: flex; gap: 2.5rem; list-style: none; }
+.nav-links a { font-size: 0.8rem; letter-spacing: 0.08em; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+.nav-links a:hover { color: var(--pink); }
+.nav-cta { padding: 0.55rem 1.4rem; background: var(--pink); color: white; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.06em; text-decoration: none; border-radius: 100px; transition: background 0.2s; }
+.nav-cta:hover { background: var(--pink-dark); }
+
+/* HERO */
+#hero { min-height: 100vh; padding: 9rem 4rem 5rem; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 4rem; align-items: center; background: var(--white); position: relative; overflow: hidden; }
+.hero-blob { position: absolute; top: -200px; right: -200px; width: 700px; height: 700px; border-radius: 50%; background: radial-gradient(circle, rgba(235,112,150,0.07) 0%, transparent 65%); pointer-events: none; }
+.hero-blob-2 { position: absolute; bottom: -100px; left: -150px; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(74,82,130,0.05) 0%, transparent 65%); pointer-events: none; }
+.hero-tag { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.35rem 1rem; border-radius: 100px; background: var(--pink-bg); color: var(--pink-dark); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.06em; margin-bottom: 1.5rem; }
+.hero-tag-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--pink); animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+h1.hero-name { font-family: var(--serif); font-size: clamp(3.5rem, 6vw, 6rem); font-weight: 900; line-height: 0.95; color: var(--charcoal); margin-bottom: 1.2rem; letter-spacing: -0.02em; }
+h1.hero-name .line-italic { font-style: italic; color: var(--pink); display: block; font-weight: 800; }
+h1.hero-name .line-last { display: block; }
+.hero-role { font-size: 1rem; color: var(--text-muted); font-weight: 300; margin-bottom: 1.8rem; line-height: 1.6; }
+.hero-role strong { color: var(--charcoal); font-weight: 500; }
+.hero-desc { font-size: 0.92rem; color: var(--text-muted); line-height: 1.85; max-width: 480px; margin-bottom: 2.5rem; }
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem; }
+.btn-fill { padding: 0.85rem 2rem; background: var(--charcoal); color: white; font-size: 0.82rem; font-weight: 500; letter-spacing: 0.06em; text-decoration: none; border-radius: 100px; transition: all 0.2s; }
+.btn-fill:hover { background: var(--pink); }
+.btn-outline { padding: 0.85rem 2rem; border: 1.5px solid var(--charcoal); color: var(--charcoal); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.06em; text-decoration: none; border-radius: 100px; transition: all 0.2s; }
+.btn-outline:hover { background: var(--charcoal); color: white; }
+.hero-chips { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.chip { padding: 0.3rem 0.85rem; border: 1px solid var(--beige-dark); border-radius: 100px; font-size: 0.72rem; color: var(--text-muted); background: var(--beige); }
+
+/* HERO VISUAL */
+.hero-visual { position: relative; display: flex; justify-content: center; }
+.hero-img-wrap { position: relative; width: 380px; height: 480px; }
+.hero-img-bg { position: absolute; inset: 0; background: var(--pink-bg); border-radius: 200px 200px 120px 120px; overflow: hidden; }
+.hero-img-bg img { width: 100%; height: 100%; object-fit: cover; }
+.hero-float-card { position: absolute; bottom: 2rem; left: -3rem; background: white; border-radius: 16px; padding: 1rem 1.4rem; box-shadow: 0 8px 32px rgba(0,0,0,0.08); min-width: 190px; z-index: 2; border: 1px solid var(--beige-dark); }
+.float-card-label { font-size: 0.68rem; letter-spacing: 0.1em; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.25rem; }
+.float-card-val { font-family: var(--serif); font-size: 1.8rem; font-weight: 800; color: var(--charcoal); line-height: 1; }
+.float-card-sub { font-size: 0.72rem; color: var(--pink); margin-top: 0.15rem; }
+.hero-float-card-2 { position: absolute; top: 2rem; right: -2rem; background: var(--blue); border-radius: 16px; padding: 1rem 1.4rem; z-index: 2; min-width: 150px; }
+.float-card-2-label { font-size: 0.65rem; color: rgba(255,255,255,0.75); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.2rem; }
+.float-card-2-val { font-family: var(--serif); font-size: 2rem; font-weight: 800; color: white; line-height: 1; }
+.float-card-2-sub { font-size: 0.72rem; color: rgba(255,255,255,0.8); margin-top: 0.2rem; }
+
+/* LOGOS STRIP */
+.logos-strip { background: var(--beige-dark); padding: 1.8rem 4rem; border-top: 1px solid #D8D2CA; border-bottom: 1px solid #D8D2CA; display: flex; align-items: center; gap: 3rem; overflow: hidden; }
+.logos-label { font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); white-space: nowrap; margin-right: 1rem; }
+.logos-list { display: flex; gap: 3.5rem; align-items: center; flex-wrap: wrap; }
+.logo-company { font-family: var(--serif); font-size: 1rem; font-weight: 700; color: #BFB8AF; transition: color 0.2s; white-space: nowrap; }
+.logo-company:hover { color: var(--charcoal); }
+
+/* SECTIONS */
+section { padding: 6rem 4rem; }
+.section-eyebrow { display: inline-flex; align-items: center; gap: 0.6rem; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--pink); font-weight: 500; margin-bottom: 1rem; }
+.section-eyebrow::before { content: ''; width: 20px; height: 2px; background: var(--pink); border-radius: 2px; }
+.section-title { font-family: var(--serif); font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 800; color: var(--charcoal); line-height: 1.15; }
+.section-title em { font-style: italic; color: var(--pink); font-weight: 700; }
+
+/* ABOUT — dark blue for max contrast */
+#about { background: var(--blue); }
+#about .section-eyebrow { color: var(--yellow-light); }
+#about .section-eyebrow::before { background: var(--yellow-light); }
+#about .section-title { color: #FFFFFF; }
+.about-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 6rem; align-items: start; margin-top: 3.5rem; }
+.about-right p { font-size: 0.95rem; color: rgba(255,255,255,0.82); line-height: 1.9; margin-bottom: 1.2rem; }
+.about-right p strong { color: white; font-weight: 500; }
+.about-right p .accent { color: var(--yellow-light); font-weight: 500; }
+.about-pills { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
+.about-pill { padding: 0.35rem 1rem; border: 1px solid rgba(255,255,255,0.25); border-radius: 100px; font-size: 0.75rem; color: rgba(255,255,255,0.75); }
+.about-numbers { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.about-num-card { padding: 1.5rem; border: 1px solid rgba(255,255,255,0.18); border-radius: 16px; background: rgba(255,255,255,0.1); }
+.about-num { font-family: var(--serif); font-size: 2.2rem; font-weight: 800; color: var(--yellow); line-height: 1; }
+.about-num-label { font-size: 0.72rem; color: rgba(255,255,255,0.6); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0.35rem; }
+
+/* EXPERIENCE */
+#experience { background: var(--white); }
+.exp-layout { display: grid; grid-template-columns: 280px 1fr; gap: 5rem; margin-top: 3.5rem; align-items: start; }
+.exp-left { position: sticky; top: 8rem; }
+.exp-intro { font-size: 0.92rem; color: var(--text-muted); line-height: 1.8; margin-top: 1rem; }
+.exp-list { display: flex; flex-direction: column; }
+.exp-item { padding: 2rem 0; border-bottom: 1px solid var(--beige-dark); display: grid; grid-template-columns: 110px 1fr; gap: 1.5rem; }
+.exp-item:first-child { border-top: 1px solid var(--beige-dark); }
+.exp-date { font-size: 0.75rem; letter-spacing: 0.08em; color: var(--pink); font-weight: 500; padding-top: 0.2rem; }
+.exp-co { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.2rem; line-height: 1.4; }
+.exp-role-title { font-family: var(--serif); font-size: 1.2rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.5rem; }
+.exp-detail { font-size: 0.85rem; color: var(--text-muted); line-height: 1.75; }
+.exp-win { display: inline-block; margin-top: 0.6rem; padding: 0.25rem 0.8rem; background: var(--pink-bg); color: var(--pink-dark); border-radius: 100px; font-size: 0.72rem; font-weight: 500; }
+
+/* PROJECTS */
+#projects { background: var(--beige); }
+.projects-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3.5rem; }
+.view-all { font-size: 0.8rem; color: var(--blue); text-decoration: none; font-weight: 500; border-bottom: 1px solid var(--blue-light); padding-bottom: 2px; }
+.projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+.project-card { background: white; border-radius: 20px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
+.project-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,0.09); }
+.project-card.featured { grid-column: span 2; display: grid; grid-template-columns: 1fr 1fr; }
+.proj-img { height: 260px; background: var(--beige); overflow: hidden; position: relative; }
+.project-card.featured .proj-img { height: 100%; min-height: 340px; }
+.proj-img-inner { width: 100%; height: 100%; background-size: cover; background-position: center; transition: transform 0.5s; display: flex; align-items: center; justify-content: center; }
+.project-card:hover .proj-img-inner { transform: scale(1.04); }
+.proj-placeholder { font-family: var(--serif); font-size: 4rem; font-weight: 900; opacity: 0.08; }
+.proj-badge { position: absolute; top: 1rem; left: 1rem; padding: 0.25rem 0.75rem; border-radius: 100px; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+.badge-brand { background: var(--charcoal); color: white; }
+.badge-social { background: var(--pink); color: white; }
+.badge-content { background: var(--blue); color: white; }
+.badge-design { background: var(--yellow); color: white; }
+.proj-body { padding: 1.75rem; }
+.project-card.featured .proj-body { display: flex; flex-direction: column; justify-content: center; }
+.proj-client { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--pink); margin-bottom: 0.4rem; }
+.proj-title { font-family: var(--serif); font-size: 1.3rem; font-weight: 800; color: var(--charcoal); margin-bottom: 0.6rem; line-height: 1.2; }
+.proj-desc { font-size: 0.83rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1rem; }
+.proj-results { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.2rem; }
+.proj-result-chip { padding: 0.22rem 0.7rem; background: var(--beige); border-radius: 100px; font-size: 0.68rem; color: var(--text-muted); font-weight: 500; }
+.proj-links { display: flex; gap: 1rem; flex-wrap: wrap; }
+.proj-link { display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.78rem; font-weight: 600; color: var(--charcoal); text-decoration: none; border-bottom: 1px solid var(--beige-dark); padding-bottom: 2px; transition: color 0.2s; }
+.proj-link:hover { color: var(--pink); border-color: var(--pink-light); }
+
+/* SKILLS */
+#skills { background: var(--white); }
+.skills-layout { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; margin-top: 3.5rem; }
+.skill-col-title { font-family: var(--serif); font-size: 1rem; font-weight: 700; color: var(--charcoal); margin-bottom: 1.2rem; padding-bottom: 0.75rem; border-bottom: 2px solid var(--pink); display: inline-block; }
+.skill-tags { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+.skill-tag { padding: 0.35rem 0.9rem; border: 1px solid var(--beige-dark); border-radius: 100px; font-size: 0.75rem; color: var(--text-muted); transition: all 0.2s; background: var(--beige); }
+.skill-tag:hover { border-color: var(--pink-light); color: var(--pink-dark); background: var(--pink-bg); }
+.certs-section { margin-top: 3.5rem; }
+.certs-title { font-family: var(--serif); font-size: 1.2rem; font-weight: 700; color: var(--charcoal); margin-bottom: 1.2rem; }
+.certs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; }
+.cert-card { padding: 0.9rem 1.1rem; border: 1px solid var(--beige-dark); border-radius: 12px; display: flex; justify-content: space-between; align-items: center; background: var(--beige); transition: border-color 0.2s; }
+.cert-card:hover { border-color: var(--pink-light); }
+.cert-name { font-size: 0.8rem; color: var(--charcoal); line-height: 1.4; }
+.cert-yr { font-size: 0.7rem; color: var(--yellow); font-weight: 600; white-space: nowrap; margin-left: 0.75rem; }
+
+/* CONTACT */
+#contact { background: var(--pink); padding: 6rem 4rem; }
+.contact-inner { max-width: 700px; }
+.contact-eyebrow { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.65); font-weight: 500; margin-bottom: 1rem; }
+.contact-title { font-family: var(--serif); font-size: clamp(2.8rem, 5vw, 4.5rem); font-weight: 900; color: white; line-height: 1.0; margin-bottom: 1.5rem; }
+.contact-title em { font-style: italic; font-weight: 800; }
+.contact-sub { font-size: 1rem; color: rgba(255,255,255,0.82); line-height: 1.7; margin-bottom: 2.5rem; max-width: 520px; }
+.contact-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+.contact-btn-white { padding: 0.9rem 2.2rem; background: white; color: var(--pink-dark); font-size: 0.82rem; font-weight: 600; letter-spacing: 0.06em; text-decoration: none; border-radius: 100px; transition: all 0.2s; }
+.contact-btn-white:hover { background: var(--charcoal); color: white; }
+.contact-btn-ghost { padding: 0.9rem 2.2rem; border: 2px solid rgba(255,255,255,0.5); color: white; font-size: 0.82rem; font-weight: 500; letter-spacing: 0.06em; text-decoration: none; border-radius: 100px; transition: all 0.2s; }
+.contact-btn-ghost:hover { border-color: white; background: rgba(255,255,255,0.15); }
+.contact-details { margin-top: 3rem; display: flex; gap: 2.5rem; flex-wrap: wrap; }
+.contact-detail { font-size: 0.85rem; color: rgba(255,255,255,0.72); }
+.contact-detail strong { display: block; color: white; font-weight: 500; margin-bottom: 0.1rem; }
+
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; max-width: 1100px; }
+.contact-social { display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap; }
+.contact-form-wrap { background: white; border-radius: 20px; padding: 2.5rem; }
+.contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
+.form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+.form-group label { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); }
+.form-group input, .form-group textarea { background: var(--beige); border: 1px solid var(--beige-dark); border-radius: 10px; padding: 0.75rem 1rem; font-size: 0.9rem; font-family: var(--sans); color: var(--charcoal); outline: none; transition: border-color 0.2s; resize: none; width: 100%; }
+.form-group input::placeholder, .form-group textarea::placeholder { color: #B0A9A2; }
+.form-group input:focus, .form-group textarea:focus { border-color: var(--pink); background: white; }
+.form-submit { padding: 0.9rem 2rem; background: white; color: var(--pink-dark); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.06em; border: none; border-radius: 100px; cursor: pointer; transition: all 0.2s; font-family: var(--sans); }
+.form-submit:hover { background: var(--charcoal); color: white; }
+.form-submit:disabled { opacity: 0.7; cursor: not-allowed; }
+.form-success { margin-top: 0.75rem; padding: 0.9rem 1.2rem; background: #EBF7EE; border-radius: 10px; color: #2D7A4F; font-size: 0.88rem; font-weight: 500; }
+.form-error { margin-top: 0.75rem; padding: 0.9rem 1.2rem; background: #FDEAEA; border-radius: 10px; color: #C0392B; font-size: 0.88rem; }
+.form-note { font-size: 0.82rem; color: rgba(255,255,255,0.8); margin-top: 0.5rem; min-height: 1.2rem; }
+@media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; } }
+
+footer { background: var(--charcoal); color: rgba(255,255,255,0.25); text-align: center; padding: 1.5rem; font-size: 0.72rem; letter-spacing: 0.08em; }
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+.anim { animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.d1{animation-delay:0.1s;opacity:0} .d2{animation-delay:0.25s;opacity:0} .d3{animation-delay:0.4s;opacity:0} .d4{animation-delay:0.55s;opacity:0} .d5{animation-delay:0.7s;opacity:0}
+
+@media (max-width: 900px) {
+  nav { padding: 1rem 1.5rem; } .nav-links,.nav-cta { display: none; }
+  section { padding: 4rem 1.5rem; }
+  #hero { grid-template-columns: 1fr; padding: 8rem 1.5rem 4rem; }
+  .hero-visual { display: none; }
+  .logos-strip { padding: 1.5rem; }
+  .about-grid,.exp-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+  .exp-left { position: static; }
+  .projects-grid { grid-template-columns: 1fr; }
+  .project-card.featured { grid-column: span 1; grid-template-columns: 1fr; }
+  .project-card.featured .proj-img { min-height: 220px; }
+  .skills-layout,.certs-grid { grid-template-columns: 1fr; }
+  #contact { padding: 4rem 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#hero" class="nav-logo">Ale<span>.</span>Pachon</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="https://www.behance.net/aleepachon" target="_blank">Behance ↗</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Let's talk</a>
+</nav>
+
+<section id="hero">
+  <div class="hero-blob"></div><div class="hero-blob-2"></div>
+  <div>
+    <div class="hero-tag anim d1"><span class="hero-tag-dot"></span>Available for new roles in Canada</div>
+    <h1 class="hero-name anim d2">
+      Diana
+      <span class="line-italic">Alejandra</span>
+      <span class="line-last">Pachon.</span>
+    </h1>
+    <p class="hero-role anim d3"><strong>Marketing & Brand Specialist</strong> — Social Media, Content Strategy & Digital Campaigns</p>
+    <p class="hero-desc anim d3">Bilingual creative with an MBA and dual degrees in Graphic Design and Advertising. I help brands tell compelling stories — from Amazon Prime Video in Latin America to B2B tech companies in Vancouver.</p>
+    <div class="hero-actions anim d4">
+      <a href="#projects" class="btn-fill">See My Work</a>
+      <a href="#contact" class="btn-outline">Get In Touch</a>
+    </div>
+    <div class="hero-chips anim d5">
+      <span class="chip">Open Work Permit</span>
+      <span class="chip">English / Spanish</span>
+      <span class="chip">Burnaby, BC</span>
+      <span class="chip">MBA 2026</span>
+      <span class="chip">Available Immediately</span>
+    </div>
+  </div>
+  <div class="hero-visual anim d3">
+    <div class="hero-img-wrap">
+      <div class="hero-img-bg">
+        <img src="profile.jpg" alt="Alejandra Pachon" onerror="this.style.background='#F5F2F0'">
+      </div>
+      <div class="hero-float-card">
+        <div class="float-card-label">Experience</div>
+        <div class="float-card-val">3+</div>
+        <div class="float-card-sub">Years across 3 countries</div>
+      </div>
+      <div class="hero-float-card-2">
+        <div class="float-card-2-label">Campaigns</div>
+        <div class="float-card-2-val">B2B+B2C</div>
+        <div class="float-card-2-sub">Digital · Brand · Social</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="logos-strip">
+  <span class="logos-label">Experience at</span>
+  <div class="logos-list">
+    <span class="logo-company">Amazon Prime Video</span>
+    <span class="logo-company">Engel & Völkers</span>
+    <span class="logo-company">Pure Red Agency</span>
+    <span class="logo-company">xSensa Labs</span>
+    <span class="logo-company">Total Space</span>
+    <span class="logo-company">Moonsbow</span>
+  </div>
+</div>
+
+<section id="about">
+  <div class="section-eyebrow">About me</div>
+  <h2 class="section-title">Where creative instinct <em>meets</em> business strategy</h2>
+  <div class="about-grid">
+    <div class="about-numbers">
+      <div class="about-num-card"><div class="about-num">MBA</div><div class="about-num-label">University Canada West, 2026</div></div>
+      <div class="about-num-card"><div class="about-num">3</div><div class="about-num-label">Countries of work experience</div></div>
+      <div class="about-num-card"><div class="about-num">2</div><div class="about-num-label">Bachelor degrees — Design & Advertising</div></div>
+      <div class="about-num-card"><div class="about-num">9+</div><div class="about-num-label">Marketing certifications</div></div>
+    </div>
+    <div class="about-right">
+      <p>I am a marketing strategist who brings something most marketers do not: a genuine graphic design foundation. This means I can take a campaign from concept to execution without losing anything in translation between strategy and creative.</p>
+      <p>My career spans <span class="accent">Amazon Prime Video</span> in Latin America — where I was part of the creative team behind influencer activations for major launches including The Rings of Power, Hotel Transylvania: Transformania, and Cinderella — to <span class="accent">B2B brand systems in Vancouver</span>, digital campaigns in Florida, and content strategy for health-tech startups in Canada.</p>
+      <p>I am bilingual in <strong>English and Spanish</strong>, authorized to work in Canada with an Open Work Permit, and ready to bring that range of experience to a team that values both creative thinking and measurable results.</p>
+      <div class="about-pills">
+        <span class="about-pill">Open Work Permit</span>
+        <span class="about-pill">Burnaby, BC</span>
+        <span class="about-pill">Available Immediately</span>
+        <span class="about-pill">English CLB 10+</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="section-eyebrow">Experience</div>
+  <h2 class="section-title">A career across <em>three continents</em></h2>
+  <div class="exp-layout">
+    <div class="exp-left">
+      <p class="exp-intro">From global entertainment launches at Amazon to brand-building at a B2B tech startup in Vancouver — each role has sharpened both my creative and strategic edge.</p>
+    </div>
+    <div class="exp-list">
+      <div class="exp-item">
+        <div><div class="exp-date">2026</div><div class="exp-co">Total Space Inc.<br>Vancouver, BC</div></div>
+        <div>
+          <div class="exp-role-title">Digital Marketing Associate (Practicum)</div>
+          <div class="exp-detail">Designed and delivered a complete B2B brand system including logo, design guidelines, service catalogue, and promotional video. Built and launched a company website with AI-driven chatbot and HubSpot CRM integration. Produced paid media assets for Google Ads and Meta Ads campaigns.</div>
+          <span class="exp-win">Full brand migration across all digital platforms</span>
+        </div>
+      </div>
+      <div class="exp-item">
+        <div><div class="exp-date">2024</div><div class="exp-co">Pure Red Agency<br>Remote, USA</div></div>
+        <div>
+          <div class="exp-role-title">Production Artist</div>
+          <div class="exp-detail">Created digital and print assets ensuring brand consistency for major retail clients including Lowe's. Optimized creative workflows, cutting the production cycle from 5 to 4 days and accelerating time-to-market by 20%.</div>
+          <span class="exp-win">20% faster time to market</span>
+        </div>
+      </div>
+      <div class="exp-item">
+        <div><div class="exp-date">2023</div><div class="exp-co">Engel & Völkers<br>Florida, USA</div></div>
+        <div>
+          <div class="exp-role-title">Social Media Marketing Intern</div>
+          <div class="exp-detail">Analyzed performance metrics and implemented strategic improvements for luxury real estate brand. Supported segmented ad campaigns improving brand visibility for 10 luxury property listings. Created and maintained monthly content calendars.</div>
+          <span class="exp-win">25% engagement increase</span>
+        </div>
+      </div>
+      <div class="exp-item">
+        <div><div class="exp-date">2022–23</div><div class="exp-co">xSensa Labs<br>Remote, Canada</div></div>
+        <div>
+          <div class="exp-role-title">Content Creator & Junior Marketing Analyst</div>
+          <div class="exp-detail">Led website redesign to enhance user experience and brand perception. Implemented membership content strategy, increasing returning user engagement by 5% within three months.</div>
+          <span class="exp-win">5% engagement increase in 3 months</span>
+        </div>
+      </div>
+      <div class="exp-item">
+        <div><div class="exp-date">2021–22</div><div class="exp-co">Amazon Prime Video<br>Bogotá, Colombia</div></div>
+        <div>
+          <div class="exp-role-title">Social Media Marketing Intern</div>
+          <div class="exp-detail">Part of the creative team for Amazon Studios' Latin American content marketing division. Contributed to influencer activation strategy for major title launches including The Rings of Power, Hotel Transylvania: Transformania, and Cinderella across LATAM markets.</div>
+          <span class="exp-win">LATAM influencer strategy · Global entertainment launches</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="projects-header">
+    <div>
+      <div class="section-eyebrow">Selected work</div>
+      <h2 class="section-title">Projects & <em>case studies</em></h2>
+    </div>
+    <a href="https://www.behance.net/aleepachon" target="_blank" class="view-all">Full portfolio on Behance →</a>
+  </div>
+  <div class="projects-grid">
+
+    <!-- FEATURED: Total Space -->
+    <div class="project-card featured">
+      <div class="proj-img">
+        <div class="proj-img-inner" style="background-image: url('https://aleepachon2-source.github.io/my-portfolio-2/totalspace.png'); background-color: #F0ECE6; background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
+        <span class="proj-badge badge-brand">B2B Brand System</span>
+      </div>
+      <div class="proj-body">
+        <div class="proj-client">Total Space Inc. — Vancouver, BC</div>
+        <div class="proj-title">End-to-End Brand System & Digital Launch</div>
+        <div class="proj-desc">Complete B2B brand migration for a commercial real estate company. Built from zero: logo, visual guidelines, service catalogue, promotional video, and a full website with HubSpot CRM integration and AI-driven chatbot. Managed Google Ads and Meta Ads campaigns from concept to execution.</div>
+        <div class="proj-results">
+          <span class="proj-result-chip">Brand Identity</span>
+          <span class="proj-result-chip">Service Catalogue</span>
+          <span class="proj-result-chip">Promo Video</span>
+          <span class="proj-result-chip">HubSpot CRM</span>
+          <span class="proj-result-chip">Google Ads</span>
+          <span class="proj-result-chip">Meta Ads</span>
+        </div>
+        <div class="proj-links">
+          <a href="https://totalspace-umber.vercel.app/" target="_blank" class="proj-link">Live Website ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Engel & Völkers -->
+    <div class="project-card">
+      <div class="proj-img">
+        <div class="proj-img-inner" style="background-image: url('https://mir-s3-cdn-cf.behance.net/projects/404/aa4792177926423.Y3JvcCw5MDIsNzA1LDAsNjI.png'); background-color: #EEF0F7; background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
+        <span class="proj-badge badge-social">Social Media</span>
+      </div>
+      <div class="proj-body">
+        <div class="proj-client">Engel & Völkers — Florida, USA</div>
+        <div class="proj-title">Luxury Real Estate Social Media Strategy</div>
+        <div class="proj-desc">Audience segmentation and data-driven content strategy boosted engagement by 25% and improved visibility for 10 luxury property listings.</div>
+        <div class="proj-results">
+          <span class="proj-result-chip">Social Strategy</span>
+          <span class="proj-result-chip">Content Calendars</span>
+          <span class="proj-result-chip">+25% Engagement</span>
+        </div>
+        <div class="proj-links">
+          <a href="https://www.behance.net/gallery/177926423/Engel-Voelkers-(Social-media)" target="_blank" class="proj-link">View on Behance ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- xSensa -->
+    <div class="project-card">
+      <div class="proj-img">
+        <div class="proj-img-inner" style="background-image: url('https://mir-s3-cdn-cf.behance.net/projects/404/11cb7d177922685.Y3JvcCwxMDIwLDc5OCwxODksMA.jpg'); background-color: #EAF0EE;"></div>
+        <span class="proj-badge badge-content">Content Strategy</span>
+      </div>
+      <div class="proj-body">
+        <div class="proj-client">xSensa Labs — Remote, Canada</div>
+        <div class="proj-title">Membership Page Redesign & Content Strategy</div>
+        <div class="proj-desc">Website redesign and membership content strategy for a health-focused SaaS platform. Increased returning user engagement by 5% within three months of launch.</div>
+        <div class="proj-results">
+          <span class="proj-result-chip">UX Writing</span>
+          <span class="proj-result-chip">Website Redesign</span>
+          <span class="proj-result-chip">+5% Retention</span>
+        </div>
+        <div class="proj-links">
+          <a href="https://xsensa.com" target="_blank" class="proj-link">Live Website ↗</a>
+          <a href="https://www.behance.net/gallery/177922685/xSensa-Labs-(Membership-page)" target="_blank" class="proj-link">Behance ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Moonsbow -->
+    <div class="project-card">
+      <div class="proj-img">
+        <div class="proj-img-inner" style="background-image: url('https://aleepachon2-source.github.io/my-portfolio-2/moonbow.png'); background-color: #EEE9F5; background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
+        <span class="proj-badge badge-design">Growth Marketing</span>
+      </div>
+      <div class="proj-body">
+        <div class="proj-client">Moonsbow — Digital Agency</div>
+        <div class="proj-title">Automated Social Media & Paid Funnel Strategy</div>
+        <div class="proj-desc">Automated social media technology and precision-targeted sales funnels using Google and Meta Ads. Brand built from scratch with full marketing automation.</div>
+        <div class="proj-results">
+          <span class="proj-result-chip">Automation</span>
+          <span class="proj-result-chip">Google Ads</span>
+          <span class="proj-result-chip">Meta Ads</span>
+        </div>
+        <div class="proj-links">
+          <a href="https://www.moonsbow.com/" target="_blank" class="proj-link">Live Website ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- UB Safety -->
+    <div class="project-card">
+      <div class="proj-img">
+        <div class="proj-img-inner" style="background-image: url('https://aleepachon2-source.github.io/my-portfolio-2/ubiquitous.png'); background-color: #EAF0F5; background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
+        <span class="proj-badge badge-content">Tech Migration</span>
+      </div>
+      <div class="proj-body">
+        <div class="proj-client">UB Safety — Vancouver, BC</div>
+        <div class="proj-title">WordPress to Astro Migration</div>
+        <div class="proj-desc">Rebuilt site architecture using modern web standards — faster loading times, better UX, and improved technical SEO rankings. Led full migration from WordPress to Astro framework.</div>
+        <div class="proj-results">
+          <span class="proj-result-chip">Astro Framework</span>
+          <span class="proj-result-chip">SEO Optimization</span>
+          <span class="proj-result-chip">UX Improvement</span>
+          <span class="proj-result-chip">Performance</span>
+        </div>
+        <div class="proj-links">
+          <a href="https://www.ubsafety.ca/" target="_blank" class="proj-link">Live Website ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- La Santa Tradición -->
+    <div class="project-card">
+      <div class="proj-img">
+        <div class="proj-img-inner" style="background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400/324de7123521405.60f0012eb5784.png'); background-color: #F5EEE6;"></div>
+        <span class="proj-badge badge-design">Graphic Design</span>
+      </div>
+      <div class="proj-body">
+        <div class="proj-client">Brand Identity — Bogotá, Colombia</div>
+        <div class="proj-title">La Santa Tradición — Brand Identity &amp; Illustration</div>
+        <div class="proj-desc">Brand identity and illustration project showcasing visual storytelling, Illustrator, and Photoshop skills. A showcase of the creative foundation behind my marketing work.</div>
+        <div class="proj-results">
+          <span class="proj-result-chip">Brand Identity</span>
+          <span class="proj-result-chip">Illustration</span>
+          <span class="proj-result-chip">Adobe Illustrator</span>
+          <span class="proj-result-chip">Photoshop</span>
+        </div>
+        <div class="proj-links">
+          <a href="https://www.behance.net/gallery/123521405/La-Santa-Tradicion" target="_blank" class="proj-link">View on Behance ↗</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="skills">
+  <div class="section-eyebrow">Skills & tools</div>
+  <h2 class="section-title">What I bring to the <em>table</em></h2>
+  <div class="skills-layout">
+    <div>
+      <div class="skill-col-title">Marketing</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Social Media Strategy</span>
+        <span class="skill-tag">Content Creation</span>
+        <span class="skill-tag">Brand Management</span>
+        <span class="skill-tag">Email Marketing</span>
+        <span class="skill-tag">SEO / SEM</span>
+        <span class="skill-tag">A/B Testing</span>
+        <span class="skill-tag">Copywriting</span>
+        <span class="skill-tag">Campaign Reporting</span>
+        <span class="skill-tag">Influencer Marketing</span>
+      </div>
+    </div>
+    <div>
+      <div class="skill-col-title">Analytics & Ads</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Google Ads</span>
+        <span class="skill-tag">Meta Ads</span>
+        <span class="skill-tag">Google Analytics</span>
+        <span class="skill-tag">HubSpot CRM</span>
+        <span class="skill-tag">SQL</span>
+        <span class="skill-tag">Data Analysis</span>
+        <span class="skill-tag">Performance Reporting</span>
+      </div>
+    </div>
+    <div>
+      <div class="skill-col-title">Design & Creative</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Adobe Photoshop</span>
+        <span class="skill-tag">Illustrator</span>
+        <span class="skill-tag">Premiere Pro</span>
+        <span class="skill-tag">After Effects</span>
+        <span class="skill-tag">Figma</span>
+        <span class="skill-tag">Canva</span>
+        <span class="skill-tag">Brand Identity</span>
+        <span class="skill-tag">UI/UX Design</span>
+      </div>
+    </div>
+  </div>
+  <div class="certs-section">
+    <div class="certs-title">Certifications</div>
+    <div class="certs-grid">
+      <div class="cert-card"><span class="cert-name">Certified Digital Marketing Associate — DMI</span><span class="cert-yr">2025</span></div>
+      <div class="cert-card"><span class="cert-name">Agile Scrum Foundation — Simplilearn</span><span class="cert-yr">2025</span></div>
+      <div class="cert-card"><span class="cert-name">SQL — Mimo</span><span class="cert-yr">2025</span></div>
+      <div class="cert-card"><span class="cert-name">Introduction to JIRA — Simplilearn</span><span class="cert-yr">2025</span></div>
+      <div class="cert-card"><span class="cert-name">Google Analytics for Beginners — Google</span><span class="cert-yr">2024</span></div>
+      <div class="cert-card"><span class="cert-name">Master Microsoft Excel — LinkedIn</span><span class="cert-yr">2024</span></div>
+      <div class="cert-card"><span class="cert-name">Introduction to Data Analytics — Simplilearn</span><span class="cert-yr">2024</span></div>
+      <div class="cert-card"><span class="cert-name">Fundamentals of Digital Marketing — Google</span><span class="cert-yr">2020</span></div>
+      <div class="cert-card"><span class="cert-name">Cloud Computing — Google</span><span class="cert-yr">2020</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact-grid">
+    <div class="contact-inner">
+      <div class="contact-eyebrow">Get in touch</div>
+      <h2 class="contact-title">Let's work <em>together.</em></h2>
+      <p class="contact-sub">Open to Marketing Coordinator, Social Media Manager, Brand Coordinator, and Content Marketing Specialist roles in Canada. Available to start immediately.</p>
+      <div class="contact-details">
+        <div class="contact-detail"><strong>Email</strong>daleepachon@gmail.com</div>
+        <div class="contact-detail"><strong>Phone</strong>236-268-2203</div>
+        <div class="contact-detail"><strong>Location</strong>Burnaby, BC, Canada</div>
+        <div class="contact-detail"><strong>Work Authorization</strong>Open Work Permit</div>
+      </div>
+      <div class="contact-social">
+        <a href="https://www.linkedin.com/in/alejandra-pachon-garzon-marketing/" target="_blank" class="contact-btn-ghost">LinkedIn ↗</a>
+        <a href="https://www.behance.net/aleepachon" target="_blank" class="contact-btn-ghost">Behance ↗</a>
+      </div>
+    </div>
+    <div class="contact-form-wrap">
+      <form class="contact-form" id="contactForm">
+        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
+        <input type="hidden" name="subject" value="New message from your portfolio">
+        <input type="hidden" name="redirect" value="false">
+        <div class="form-group">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Your email</label>
+          <input type="email" id="email" name="email" placeholder="jane@company.com" required>
+        </div>
+        <div class="form-group">
+          <label for="subject_field">Subject</label>
+          <input type="text" id="subject_field" name="subject_field" placeholder="Job opportunity at...">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell me about the role or project..." required></textarea>
+        </div>
+        <button type="submit" class="form-submit" id="submitBtn">Send Message →</button>
+        <div class="form-success" id="formSuccess" style="display:none">
+          <span>✓</span> Message sent! I will get back to you soon.
+        </div>
+        <div class="form-error" id="formError" style="display:none">
+          Something went wrong. Please try again.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Diana Alejandra Pachon · Burnaby, BC · Open to Work</footer>
+<script>
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submitBtn');
+  const success = document.getElementById('formSuccess');
+  const error = document.getElementById('formError');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  success.style.display = 'none';
+  error.style.display = 'none';
+  const formData = new FormData(this);
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData
+    });
+    const data = await res.json();
+    if (data.success) {
+      success.style.display = 'block';
+      this.reset();
+    } else {
+      error.style.display = 'block';
+    }
+  } catch(err) {
+    error.style.display = 'block';
+  }
+  btn.textContent = 'Send Message →';
+  btn.disabled = false;
+});
+</script>
+</body>
+</html>
