@@ -286,6 +286,48 @@ footer {
     margin-bottom: 0.75rem;
 }
 
+.project-description {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-bottom: 1rem;
+}
+
+.project-tag {
+    background-color: rgba(152,156,20,0.16);
+    color: var(--color-black) !important;
+    border-radius: 999px;
+    padding: 4px 10px;
+    font-size: 0.78rem;
+    font-weight: 500;
+}
+
+.project-image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.55rem;
+    margin-bottom: 1rem;
+}
+
+.project-image-grid img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .project-image-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .project-role-tag {
     display: inline-block;
     background-color: var(--color-olive);

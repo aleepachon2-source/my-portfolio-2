@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XL6W5RKE8X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XL6W5RKE8X');
+</script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Total Space Inc.: Complete B2B Brand Transformation | Alejandra Pachon</title>
@@ -229,6 +238,49 @@
       color: rgba(39,42,42,0.84);
     }
 
+    .embed-wrapper {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--white);
+    }
+
+    .video-embed {
+      aspect-ratio: 9 / 16;
+      max-height: 560px;
+      margin: 0 auto;
+    }
+
+    .pdf-embed {
+      min-height: 540px;
+    }
+
+    .embed-wrapper iframe,
+    .embed-wrapper embed {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin-top: 0.8rem;
+      border-radius: 999px;
+      text-decoration: none;
+      padding: 0.6rem 1rem;
+      font-weight: 600;
+      border: 2px solid var(--text);
+      color: var(--text);
+      background: transparent;
+    }
+
+    .download-btn:hover {
+      background: rgba(39, 42, 42, 0.07);
+    }
+
     .play-overlay::before {
       content: "▶";
       display: inline-grid;
@@ -402,17 +454,20 @@
             <div class="gallery-image">Website Homepage - Before &amp; After (Side-by-side comparison)</div>
             <figcaption class="caption">Website Homepage - Before &amp; After</figcaption>
           </figure>
-          <figure class="gallery-item">
-            <div class="gallery-image play-overlay">Promotional Video Thumbnail<br>Automated Parking Systems</div>
-            <figcaption class="caption">Promotional Video Thumbnail - Automated Parking Systems</figcaption>
+          <figure class="gallery-item wide">
+            <div class="embed-wrapper video-embed">
+              <iframe src="https://www.youtube.com/embed/eZRTdWjaeJg" title="Total Space promotional video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <figcaption class="caption">Promotional Video - Automated Parking Systems</figcaption>
           </figure>
-          <figure class="gallery-item">
-            <div class="gallery-image">Service Catalogue - Cover</div>
-            <figcaption class="caption">Service Catalogue - Cover</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <div class="gallery-image">Service Catalogue - Interior Spread</div>
-            <figcaption class="caption">Service Catalogue - Interior Spread</figcaption>
+          <figure class="gallery-item wide">
+            <div class="embed-wrapper pdf-embed">
+              <iframe src="../totalspace_catalogue.pdf.pdf" title="Total Space service catalogue" loading="lazy"></iframe>
+            </div>
+            <figcaption class="caption">
+              Service Catalogue
+              <a class="download-btn" href="../totalspace_catalogue.pdf.pdf" download>Download PDF</a>
+            </figcaption>
           </figure>
           <figure class="gallery-item">
             <div class="gallery-image">Website - Mobile Responsive Views (3 phone mockups)</div>

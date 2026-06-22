@@ -1,6 +1,6 @@
 ---
 title: "Alejandra Pachon"
-subtitle: "Marketing & Brand Specialist | Graphic Designer | MBA"
+subtitle: "Marketing & Design Specialist | Graphic Designer | MBA"
 about:
   template: trestles
   image: profile.jpg
