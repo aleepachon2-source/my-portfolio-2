@@ -7,7 +7,7 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-XL6W5RKE8X');h
+  gtag('config', 'G-XL6W5RKE8X');
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -139,7 +139,8 @@ section { padding: 6rem 4rem; }
 .proj-img-inner { width: 100%; height: 100%; background-size: cover; background-position: center; transition: transform 0.5s; display: flex; align-items: center; justify-content: center; }
 .project-card:hover .proj-img-inner { transform: scale(1.04); }
 .proj-placeholder { font-family: var(--serif); font-size: 4rem; font-weight: 900; opacity: 0.08; }
-.proj-badge { position: absolute; top: 1rem; left: 1rem; padding: 0.25rem 0.75rem; border-radius: 100px; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+.proj-img-link { position: absolute; inset: 0; z-index: 2; }
+.proj-badge { position: absolute; top: 1rem; left: 1rem; padding: 0.25rem 0.75rem; border-radius: 100px; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; z-index: 3; }
 .badge-brand { background: var(--charcoal); color: white; }
 .badge-social { background: var(--pink); color: white; }
 .badge-content { background: var(--blue); color: white; }
@@ -380,6 +381,7 @@ footer { background: var(--charcoal); color: rgba(255,255,255,0.25); text-align:
     <!-- FEATURED: Total Space -->
     <div class="project-card featured">
       <div class="proj-img">
+        <a href="projects/total-space.html" class="proj-img-link" aria-label="Total Space case study"></a>
         <div class="proj-img-inner" style="background-image: url('https://aleepachon2-source.github.io/my-portfolio-2/totalspace.png'); background-color: #F0ECE6; background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
         <span class="proj-badge badge-brand">B2B Brand System</span>
       </div>
@@ -405,7 +407,8 @@ footer { background: var(--charcoal); color: rgba(255,255,255,0.25); text-align:
     <!-- Engel & Völkers -->
     <div class="project-card">
       <div class="proj-img">
-        <div class="proj-img-inner" style="background-image: url('https://mir-s3-cdn-cf.behance.net/projects/404/aa4792177926423.Y3JvcCw5MDIsNzA1LDAsNjI.png'); background-color: #EEF0F7; background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
+        <a href="projects/engel-volkers.html" class="proj-img-link" aria-label="Engel & Völkers case study"></a>
+        <div class="proj-img-inner" style="background-image: url('https://mir-s3-cdn-cf.behance.net/projects/max_808/aa4792177926423.Y3JvcCw5MDIsNzA1LDAsNjI.png'); background-color: #EEF0F7; background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
         <span class="proj-badge badge-social">Social Media</span>
       </div>
       <div class="proj-body">
@@ -427,7 +430,8 @@ footer { background: var(--charcoal); color: rgba(255,255,255,0.25); text-align:
     <!-- xSensa -->
     <div class="project-card">
       <div class="proj-img">
-        <div class="proj-img-inner" style="background-image: url('https://mir-s3-cdn-cf.behance.net/projects/404/11cb7d177922685.Y3JvcCwxMDIwLDc5OCwxODksMA.jpg'); background-color: #EAF0EE;"></div>
+        <a href="projects/xsensa.html" class="proj-img-link" aria-label="xSensa Labs case study"></a>
+        <div class="proj-img-inner" style="background-image: url('https://mir-s3-cdn-cf.behance.net/projects/max_808/11cb7d177922685.Y3JvcCwxMDIwLDc5OCwxODksMA.jpg'); background-color: #EAF0EE;"></div>
         <span class="proj-badge badge-content">Content Strategy</span>
       </div>
       <div class="proj-body">
@@ -450,6 +454,7 @@ footer { background: var(--charcoal); color: rgba(255,255,255,0.25); text-align:
     <!-- Moonsbow -->
     <div class="project-card">
       <div class="proj-img">
+        <a href="projects/moonsbow.html" class="proj-img-link" aria-label="Moonsbow case study"></a>
         <div class="proj-img-inner" style="background-image: url('https://aleepachon2-source.github.io/my-portfolio-2/moonbow.png'); background-color: #EEE9F5; background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
         <span class="proj-badge badge-design">Growth Marketing</span>
       </div>
@@ -472,6 +477,7 @@ footer { background: var(--charcoal); color: rgba(255,255,255,0.25); text-align:
     <!-- UB Safety -->
     <div class="project-card">
       <div class="proj-img">
+        <a href="projects/brand-collateral.html" class="proj-img-link" aria-label="UB Safety case study"></a>
         <div class="proj-img-inner" style="background-image: url('https://aleepachon2-source.github.io/my-portfolio-2/ubiquitous.png'); background-color: #EAF0F5; background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
         <span class="proj-badge badge-content">Tech Migration</span>
       </div>
@@ -495,6 +501,7 @@ footer { background: var(--charcoal); color: rgba(255,255,255,0.25); text-align:
     <!-- La Santa Tradición -->
     <div class="project-card">
       <div class="proj-img">
+        <a href="projects/la-santa-tradicion.html" class="proj-img-link" aria-label="La Santa Tradición case study"></a>
         <div class="proj-img-inner" style="background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400/324de7123521405.60f0012eb5784.png'); background-color: #F5EEE6;"></div>
         <span class="proj-badge badge-design">Graphic Design</span>
       </div>
