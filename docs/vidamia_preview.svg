@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <defs>
+    <linearGradient id="hero-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C8B8A2;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#B5A28E;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="card1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8DDD2;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#D4C8BA;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="card2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4CFC6;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#C2BDB4;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="card3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E0D8CE;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#CEC5BA;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Page background -->
+  <rect width="800" height="420" fill="#F7F2EB"/>
+
+  <!-- ─── NAV ─── -->
+  <rect width="800" height="50" fill="#1E1C1A"/>
+  <text x="36" y="32" font-family="Georgia,'Times New Roman',serif" font-size="15" font-weight="bold" fill="#F7F2EB" letter-spacing="3">VIDAMIA</text>
+  <!-- nav links -->
+  <text x="310" y="30" font-family="'Helvetica Neue',Arial,sans-serif" font-size="9.5" fill="rgba(247,242,235,0.55)" letter-spacing="1.5">HOME</text>
+  <text x="370" y="30" font-family="'Helvetica Neue',Arial,sans-serif" font-size="9.5" fill="rgba(247,242,235,0.55)" letter-spacing="1.5">SHOP</text>
+  <text x="426" y="30" font-family="'Helvetica Neue',Arial,sans-serif" font-size="9.5" fill="rgba(247,242,235,0.55)" letter-spacing="1.5">ABOUT</text>
+  <text x="487" y="30" font-family="'Helvetica Neue',Arial,sans-serif" font-size="9.5" fill="rgba(247,242,235,0.55)" letter-spacing="1.5">CONTACT</text>
+  <!-- cart icon -->
+  <rect x="748" y="16" width="16" height="16" rx="3" fill="none" stroke="rgba(247,242,235,0.5)" stroke-width="1.5"/>
+  <path d="M752 16 L755 10 L759 10 L762 16" fill="none" stroke="rgba(247,242,235,0.5)" stroke-width="1.5"/>
+
+  <!-- ─── HERO ─── -->
+  <rect x="0" y="50" width="800" height="190" fill="url(#hero-grad)"/>
+  <!-- hero accent shape -->
+  <ellipse cx="620" cy="110" rx="160" ry="120" fill="rgba(255,255,255,0.08)"/>
+  <ellipse cx="680" cy="160" rx="90" ry="70" fill="rgba(255,255,255,0.06)"/>
+  <!-- hero text -->
+  <text x="50" y="112" font-family="Georgia,'Times New Roman',serif" font-size="30" font-weight="bold" fill="#1E1C1A" letter-spacing="-0.5">Live beautifully,</text>
+  <text x="50" y="148" font-family="Georgia,'Times New Roman',serif" font-size="30" font-weight="bold" fill="#1E1C1A" font-style="italic">every day.</text>
+  <text x="50" y="176" font-family="'Helvetica Neue',Arial,sans-serif" font-size="11" fill="#5E5852" letter-spacing="0.3">Curated lifestyle essentials · Free shipping over $75</text>
+  <!-- CTA button -->
+  <rect x="50" y="192" width="120" height="36" rx="18" fill="#EB7096"/>
+  <text x="110" y="215" font-family="'Helvetica Neue',Arial,sans-serif" font-size="10.5" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="0.5">Shop Now ↗</text>
+
+  <!-- ─── SECTION LABEL ─── -->
+  <text x="50" y="272" font-family="'Helvetica Neue',Arial,sans-serif" font-size="8.5" fill="#9E9890" letter-spacing="2.5">FEATURED COLLECTION</text>
+  <line x1="200" y1="268" x2="750" y2="268" stroke="#E0D8CE" stroke-width="0.8"/>
+
+  <!-- ─── PRODUCT CARDS ─── -->
+  <!-- Card 1 -->
+  <rect x="50" y="282" width="210" height="118" rx="8" fill="url(#card1)"/>
+  <rect x="50" y="356" width="210" height="44" rx="0" fill="rgba(247,242,235,0.6)"/>
+  <rect x="50" y="356" width="210" height="44" rx="8" fill="rgba(247,242,235,0.6)"/>
+  <rect x="50" y="356" width="210" height="22" fill="rgba(247,242,235,0.6)"/>
+  <text x="65" y="370" font-family="'Helvetica Neue',Arial,sans-serif" font-size="9" font-weight="600" fill="#1E1C1A">Linen Candle Set</text>
+  <text x="65" y="386" font-family="'Helvetica Neue',Arial,sans-serif" font-size="9" fill="#9E9890">$38.00</text>
+  <!-- card1 image placeholder -->
+  <circle cx="155" cy="318" r="22" fill="rgba(255,255,255,0.35)"/>
+  <text x="155" y="322" font-family="sans-serif" font-size="18" text-anchor="middle" fill="rgba(94,88,82,0.4)">🕯</text>
+
+  <!-- Card 2 -->
+  <rect x="278" y="282" width="210" height="118" rx="8" fill="url(#card2)"/>
+  <rect x="278" y="356" width="210" height="44" rx="8" fill="rgba(247,242,235,0.6)"/>
+  <rect x="278" y="356" width="210" height="22" fill="rgba(247,242,235,0.6)"/>
+  <text x="293" y="370" font-family="'Helvetica Neue',Arial,sans-serif" font-size="9" font-weight="600" fill="#1E1C1A">Ceramic Mug — Sand</text>
+  <text x="293" y="386" font-family="'Helvetica Neue',Arial,sans-serif" font-size="9" fill="#9E9890">$24.00</text>
+  <circle cx="383" cy="318" r="22" fill="rgba(255,255,255,0.35)"/>
+  <text x="383" y="322" font-family="sans-serif" font-size="18" text-anchor="middle" fill="rgba(94,88,82,0.4)">☕</text>
+
+  <!-- Card 3 -->
+  <rect x="506" y="282" width="210" height="118" rx="8" fill="url(#card3)"/>
+  <rect x="506" y="356" width="210" height="44" rx="8" fill="rgba(247,242,235,0.6)"/>
+  <rect x="506" y="356" width="210" height="22" fill="rgba(247,242,235,0.6)"/>
+  <text x="521" y="370" font-family="'Helvetica Neue',Arial,sans-serif" font-size="9" font-weight="600" fill="#1E1C1A">Linen Tote — Natural</text>
+  <text x="521" y="386" font-family="'Helvetica Neue',Arial,sans-serif" font-size="9" fill="#9E9890">$45.00</text>
+  <circle cx="611" cy="318" r="22" fill="rgba(255,255,255,0.35)"/>
+  <text x="611" y="322" font-family="sans-serif" font-size="18" text-anchor="middle" fill="rgba(94,88,82,0.4)">👜</text>
+
+  <!-- ─── SHOPIFY BADGE ─── -->
+  <rect x="50" y="410" width="90" height="0" rx="4" fill="#96BF48" opacity="0.15"/>
+</svg>
